@@ -6,6 +6,10 @@
     var pizzas = Model;
 }
 
+<div class="text-center">
+
+<a class="text-decoration-none btn btn-info mt-3" href="@Url.Action("Create" , "Pizza")">Aggiungi una pizza</a>
+</div>
    
 @if(pizzas.Length is 0)
 {
@@ -34,7 +38,7 @@ else
                         <a class="text-decoration-none" href="@Url.Action("Detail", "Pizza", new {Id = pizza.Id})">@pizza.Name</a>
                     </td>
                     <td class="fw-bold">@pizza.Description</td>
-                    <td class="fw-bold"><img class="img-fluid w-25" src="@pizza.Foto" /></td>
+                    <td class="fw-bold"><img class="img-fluid w-25"  src="@pizza.Foto" /></td>
                     <td class="fw-bold">@pizza.Price</td>
 
                 </tr>
