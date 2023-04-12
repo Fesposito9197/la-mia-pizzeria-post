@@ -10,7 +10,7 @@ namespace la_mia_pizzeria_static.Models
         {
             optionsBuilder.UseSqlServer("Data Source=LocalHost;Initial Catalog=PizzeriaDb;Integrated Security=True;Pooling=False;Encrypt=False;");
         }
-        public void seed() 
+        public void seed()
         {
             if (!Pizzas.Any())
             {

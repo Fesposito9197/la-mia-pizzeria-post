@@ -12,7 +12,7 @@ namespace la_mia_pizzeria_static.Attributes
         }
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
-            string fieldValue = value as string;
+            string? fieldValue = value as string;
             if (fieldValue == null || fieldValue.Trim().Split(' ').Length < WordCount) 
             {
                 return new ValidationResult($"Il campo deve contenere almeno {WordCount} parole");

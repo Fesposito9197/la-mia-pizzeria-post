@@ -31,7 +31,7 @@ namespace la_mia_pizzeria_static.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Pizza pizza)
         {
-            if (!ModelState.IsValid) 
+            if (!ModelState.IsValid)
             {
                 return View("Create", pizza);
             }
@@ -45,9 +45,9 @@ namespace la_mia_pizzeria_static.Controllers
         {
             using var ctx = new PizzeriaContext();
 
-           var pizza = ctx.Pizzas.Single(p => p.Id == id);
+            var pizza = ctx.Pizzas.Single(p => p.Id == id);
 
-           return View(pizza);
+            return View(pizza);
         }
 
         public IActionResult Privacy()

@@ -6,12 +6,12 @@ namespace la_mia_pizzeria_static.Models
 {
     public class Pizza
     {
-        
+
         public int Id { get; set; }
 
 
 
-        [Required(ErrorMessage ="Campo obbligatorio")]
+        [Required(ErrorMessage = "Campo obbligatorio")]
         [StringLength(30, ErrorMessage = "Il nome non puo avere piu di 30 caratteri")]
         public string Name { get; set; } = string.Empty;
 
@@ -30,8 +30,8 @@ namespace la_mia_pizzeria_static.Models
 
 
         [Required(ErrorMessage = "Campo obbligatorio")]
-        [Range(1, 200, ErrorMessage = "Il prezzo non puo essere inferiore a 0")]
-        
+        //[Range(1, 200, ErrorMessage = "Il prezzo non puo essere inferiore a 0")]
+        [MoreThanZeroPrice]
         public int Price { get; set; }
     }
 }
